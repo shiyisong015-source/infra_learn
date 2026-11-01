@@ -2,7 +2,7 @@ import time
 import torch
 
 assert torch.cuda.is_available(), "cuda is not available"
-device=torch.device("cuda")
+device=torch.device("cuda:0")
 N=4096
 a=torch.randn(N,N,device=device)
 b=torch.randn(N,N,device=device)
